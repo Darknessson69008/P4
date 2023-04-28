@@ -1,0 +1,130 @@
+
+$main-bg-color: rgba(234, 234, 234, 1);
+$main-purple-color: rgba(147,86,220);
+
+// en absolute,  123 sur fonctionnement, et nouveau sur images//
+
+header {
+    .localisation {
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(203, 203, 203);
+        i {
+        width: 12px;
+        height: 16px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        padding-right: 15px;
+        }
+    }   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Shrikhand', sans-serif ;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+h4 {
+    font-family: 'Shrikhand', sans-serif ;
+    padding-top: 20px;
+}
+
+.btn {
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+    background-color: $main-purple-color;
+    width: 50%;
+    justify-content: center; // verifier alignement //
+}
+
+.reserver {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $main-bg-color;
+}
+
+.fonctionnement {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+    article {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        width: 90%;
+        background: #F7F7F7;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        i {
+            padding-right: 15px;
+        }
+    }
+}
+
+
+.restaurants {
+    padding-left: 30px;
+    background-color: $main-bg-color;
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 0px;
+        gap: 4px;
+        width: 90%;
+        height: 251px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+        margin-bottom: 30px;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 75%;
+            border-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        h3 {
+            margin:0;
+            font-weight: 900;
+        }
+        p{
+          margin: 2px;  
+        }
+    }
+}
+
+
+footer {
+    color: #F7F7F7;
+    background-color:  #353535;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+/* au dela de 768*/
+@media (min-width: 767.98px) {
+
+}
