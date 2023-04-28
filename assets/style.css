@@ -24,30 +24,31 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-weight: 900;
-}
-
 h4 {
   font-family: "Shrikhand", sans-serif;
   padding-top: 20px;
-}
-
-.btn {
-  display: flex;
-  padding: 15px;
-  border-radius: 25px;
-  color: white;
-  background-color: rgb(147, 86, 220);
-  width: 50%;
-  justify-content: center;
 }
 
 .reserver {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   background-color: rgb(234, 234, 234);
+  padding: 50px;
+}
+.reserver p {
+  padding-bottom: 15px;
+}
+.reserver .btn {
+  display: flex;
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(147, 86, 220);
+  width: 50%;
+  min-width: 218px;
+  justify-content: center;
 }
 
 .fonctionnement {
@@ -67,6 +68,7 @@ h4 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin-bottom: 30px;
+  margin-left: 15px;
 }
 .fonctionnement article i {
   padding-right: 15px;
