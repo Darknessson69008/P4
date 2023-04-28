@@ -57,6 +57,16 @@ h4 {
   flex-direction: column;
   padding-left: 30px;
 }
+.fonctionnement p {
+  position: absolute;
+  color: #FFFFFF;
+  background-color: rgb(147, 86, 220);
+  height: 22px;
+  width: 16px;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-top: 2px;
+}
 .fonctionnement article {
   display: flex;
   justify-content: center;
@@ -106,9 +116,11 @@ h4 {
 .restaurants .card h3 {
   margin: 0;
   font-weight: 900;
+  padding-left: 10px;
 }
 .restaurants .card p {
   margin: 2px;
+  padding-left: 10px;
 }
 
 footer {
