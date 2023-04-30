@@ -168,6 +168,9 @@ a {
     display:flex;
     flex-direction: column;
     background-color: $main-bg-color;
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     .nom {
         display: flex;
         flex-direction: row;

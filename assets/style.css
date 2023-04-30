@@ -157,6 +157,9 @@ a {
   display: flex;
   flex-direction: column;
   background-color: rgb(234, 234, 234);
+  border-radius: 25px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .menu .nom {
   display: flex;
