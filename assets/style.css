@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header .localisation {
   font-weight: 900;
   display: flex;
@@ -27,6 +28,31 @@ h1 {
 h4 {
   font-family: "Shrikhand", sans-serif;
   padding-top: 20px;
+  margin-top: 0%;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+}
+
+.btn { /* corriger dégradé*/
+  display: flex;
+  padding: 15px;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(147, 86, 220);
+  /*background: linear-gradient(to bottom, #FF79DA, #9356DC)*/
+  width: 50%;
+  min-width: 218px;
+  justify-content: center;
 }
 
 .reserver {
@@ -39,16 +65,6 @@ h4 {
 }
 .reserver p {
   padding-bottom: 15px;
-}
-.reserver .btn {
-  display: flex;
-  padding: 15px;
-  border-radius: 25px;
-  color: white;
-  background-color: rgb(147, 86, 220);
-  width: 50%;
-  min-width: 218px;
-  justify-content: center;
 }
 
 .fonctionnement {
@@ -85,8 +101,10 @@ h4 {
 }
 
 .restaurants {
-  padding-top: 30px;
-  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
   background-color: rgb(234, 234, 234);
 }
 .restaurants .card {
@@ -94,7 +112,7 @@ h4 {
   flex-direction: column;
   padding: 0px 0px 0px;
   gap: 4px;
-  width: 90%;
+  width: 100%;
   height: 251px;
   background: #FFFFFF;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
@@ -102,12 +120,13 @@ h4 {
   flex: none;
   order: 0;
   flex-grow: 1;
-  margin-bottom: 30px;
+}
+.restaurants .card .card-sum {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .restaurants .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
   height: 75%;
   border-radius: 20px;
   border-bottom-left-radius: 0px;
@@ -121,6 +140,58 @@ h4 {
 .restaurants .card p {
   margin: 2px;
   padding-left: 10px;
+}
+.restaurants .card .heart-icon {
+  position: relative;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-right: 16px;
+  transition: transform 400ms;
+}
+.restaurants .card .heart-icon:hover {
+  color: rgb(147, 86, 220);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(234, 234, 234);
+}
+.menu .nom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu .repas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+}
+.menu .repas h2 {
+  font-weight: 100;
+}
+.menu .card {
+  display: flex;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+  border-radius: 15.0431px;
+  padding: 10px;
+  justify-content: space-between;
+}
+.menu .card h3 {
+  margin: 0px;
+}
+.menu .card p {
+  margin: 3px;
+}
+.menu .card .prix {
+  align-self: flex-end;
+}
+.menu .card:focus {
+  background-color: aqua;
 }
 
 footer {

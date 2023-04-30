@@ -35,6 +35,30 @@ h1 {
 h4 {
     font-family: 'Shrikhand', sans-serif ;
     padding-top: 20px;
+    margin-top: 0%;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.btn { /* corriger dégradé*/
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+    background-color: $main-purple-color;
+    /*background: linear-gradient(to bottom, #FF79DA, #9356DC)*/
+    width: 50%;
+    min-width: 218px;
+    justify-content: center;
 }
 
 .reserver {
@@ -47,16 +71,7 @@ h4 {
     p{
         padding-bottom: 15px;
     }
-    .btn {
-        display: flex;
-        padding: 15px;
-        border-radius: 25px;
-        color: white;
-        background-color: $main-purple-color;
-        width: 50%;
-        min-width: 218px;
-        justify-content: center;
-    }
+    
 }
 
 
@@ -96,15 +111,17 @@ h4 {
 
 
 .restaurants {
-    padding-top: 30px;
-    padding-left: 30px;
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding:30px;
     background-color: $main-bg-color;
     .card {
         display: flex;
         flex-direction: column;
         padding: 0px 0px 0px;
         gap: 4px;
-        width: 90%;
+        width: 100%;
         height: 251px;
         background: #FFFFFF;
         box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
@@ -112,10 +129,12 @@ h4 {
         flex: none;
         order: 0;
         flex-grow: 1;
-        margin-bottom: 30px;
+        .card-sum {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
         img {
-            object-fit: cover;
-            width: 100%;
             height: 75%;
             border-radius: 20px;
             border-bottom-left-radius: 0px;
@@ -129,6 +148,59 @@ h4 {
         p{
             margin: 2px;  
             padding-left: 10px;
+        }
+        .heart-icon {
+            position: relative;
+            display: flex;
+            justify-content: right;
+            align-items: right;
+            margin-right: 16px;
+            transition: transform 400ms;
+            }
+            .heart-icon:hover {
+                color: $main-purple-color;
+            }     
+                
+        }
+    }
+
+.menu {
+    display:flex;
+    flex-direction: column;
+    background-color: $main-bg-color;
+    .nom {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .repas {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        padding: 15px;
+        h2{
+            font-weight: 100;
+        }
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        background: #FFFFFF;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15.0431px;
+        padding: 10px;
+        justify-content: space-between;
+        h3{
+            margin: 0px;
+        }
+        p{
+            margin: 3px;
+        }
+        .prix{
+            align-self: flex-end;
+        }
+        &:focus{
+            background-color: aqua;
         }
     }
 }
