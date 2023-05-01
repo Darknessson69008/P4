@@ -2,7 +2,35 @@
 $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
 
-// en absolute,  123 sur fonctionnement, et nouveau sur images//
+/*revoir loader*/
+
+.loader {
+    display: none;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform : rotate(360deg);
+    }
+}
+
+
+// en absolute, mettre nouveau sur images//
 
 header {
     display: flex;
@@ -65,7 +93,7 @@ a {
     color: black;
 }
 
-.btn { /* intégrer deuxieme dégradé sur hover*/
+.btn { 
     display: flex;
     padding: 15px;
     border-radius: 25px;
@@ -235,9 +263,17 @@ a {
         align-items: center;
         h3{
             margin: 0px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
         }
         p{
             margin: 3px;
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
         }
         .prix{
             align-self: flex-end;
@@ -247,9 +283,6 @@ a {
             /* display:none; ? */
             background: #99E2D0;
             background-clip: text;
-        }
-        .btn{           
-            /* alignement*/
         }
     }
 }
