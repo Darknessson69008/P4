@@ -31,7 +31,7 @@ header {
   align-items: center;
   width: 100%;
 }
-header h1 {
+header .logo {
   width: 80%;
 }
 header a {
@@ -67,6 +67,13 @@ h1 {
   text-align: center;
 }
 
+.logo {
+  font-family: "Shrikhand", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
 h4 {
   font-family: "Shrikhand", sans-serif;
   padding-top: 20px;
@@ -77,6 +84,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  margin-bottom: 0px;
 }
 
 a {

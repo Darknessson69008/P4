@@ -30,7 +30,15 @@ $main-purple-color: rgba(147,86,220);
 }
 
 
-// en absolute, mettre nouveau sur images//
+    // en absolute, mettre nouveau sur images 
+    //   pour checked, carré scale 0 à 0% pour 1 a 100%, ou width, 
+    // avec un overflow hidden, avec transition??
+    // commander, encapsuler dans une div, puis flex btn
+    // nth-child permet selectionner un element x dans un container
+    // margin négatif pour manger element au dessus
+    // osef mail contact, doit juste ouvrir
+    // prix doit être a droite du plat, check le pousse, et ... si nom trop long
+    // premier H1 en p class logo, avec meme carac
 
 header {
     display: flex;
@@ -39,7 +47,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 100%;
-    h1{
+    .logo{
         width: 80%;
     }
     a {
@@ -76,6 +84,13 @@ h1 {
     text-align: center;
 }
 
+.logo {
+    font-family: 'Shrikhand', sans-serif ;
+    text-align: center;
+    font-weight: 500;
+    font-size: xx-large ;
+}
+
 h4 {
     font-family: 'Shrikhand', sans-serif ;
     padding-top: 20px;
@@ -85,6 +100,7 @@ h4 {
 img {
     object-fit: cover;
     width: 100%;
+    margin-bottom: -0px; // attention image derrière //
 }
 
 a {
