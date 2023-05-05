@@ -1,4 +1,4 @@
-/*revoir loader*/
+/*revoir loader sans js*/
 .loader {
   display: none;
   border: 16px solid #f3f3f3; /* Light grey */
@@ -12,15 +12,16 @@
   right: 0;
   bottom: 0;
   left: 0;
-  animation: spin 3s linear infinite;
+  animation: spin 3s linear;
 }
 
 @keyframes spin {
-  0% {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 header {

@@ -3,10 +3,10 @@ $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
 $main-green-color: rgba(153,226,206);
 
-/*revoir loader*/
+/*revoir loader sans js*/
 
 .loader {
-    display: none;
+    display:none;
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #3498db; /* Blue */
     border-radius: 50%;
@@ -18,15 +18,16 @@ $main-green-color: rgba(153,226,206);
     right: 0;
     bottom: 0;
     left: 0;
-    animation: spin 3s linear infinite;
+    animation: spin 3s linear;
 }
 
 @keyframes spin {
-    0%{
+    from{
         transform: rotate(0deg);
     }
-    100% {
+    to {
         transform : rotate(360deg);
+        opacity: 0;
     }
 }
 
@@ -34,12 +35,8 @@ $main-green-color: rgba(153,226,206);
     // en absolute, mettre nouveau sur images 
     //   pour checked, carré scale 0 à 0% pour 1 a 100%, ou width, 
     // avec un overflow hidden, avec transition??
-    // commander, encapsuler dans une div, puis flex btn
     // nth-child permet selectionner un element x dans un container
-    // margin négatif pour manger element au dessus
-    // osef mail contact, doit juste ouvrir
     // prix doit être a droite du plat, check le pousse, et ... si nom trop long
-    // premier H1 en p class logo, avec meme carac
     // animation plats : animation opacity 0 1 + delay 1s puis 2s
 
 header {
