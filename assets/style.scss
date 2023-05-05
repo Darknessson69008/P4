@@ -1,6 +1,7 @@
 
 $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
+$main-green-color: rgba(153,226,206);
 
 /*revoir loader*/
 
@@ -39,6 +40,7 @@ $main-purple-color: rgba(147,86,220);
     // osef mail contact, doit juste ouvrir
     // prix doit être a droite du plat, check le pousse, et ... si nom trop long
     // premier H1 en p class logo, avec meme carac
+    // animation plats : animation opacity 0 1 + delay 1s puis 2s
 
 header {
     display: flex;
@@ -100,7 +102,6 @@ h4 {
 img {
     object-fit: cover;
     width: 100%;
-    margin-bottom: -0px; // attention image derrière //
 }
 
 a {
@@ -119,6 +120,8 @@ a {
     width: 50%;
     min-width: 218px;
     justify-content: center;
+    align-self: center;
+    margin-top: 16px;
     &:hover{
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
@@ -131,11 +134,7 @@ a {
     text-align: center;
     align-items: center;
     background-color: $main-bg-color;
-    padding: 50px;
-    p{
-        padding-bottom: 15px;
-    }
-    
+    padding: 50px;       
 }
 
 
@@ -245,6 +244,9 @@ a {
 }
 
 
+.menu-img {
+    margin-bottom: -40px; 
+}
 
 .menu {
     display:flex;
@@ -258,6 +260,9 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        background-color: $main-bg-color;
+        border-radius: 25px;
+        padding-left: 15px;
     }
     .repas {
         display: flex;
@@ -266,6 +271,12 @@ a {
         padding: 15px;
         h2{
             font-weight: 100;
+            margin-bottom: 0px;
+        }
+        .border_title{
+            border-top: 3px solid rgba(153,226,206,1);
+            width: 40px;
+            margin:0px;
         }
     }
     .card {
@@ -276,32 +287,32 @@ a {
         border-radius: 15.0431px;
         padding: 10px;
         justify-content: space-between;
-        align-items: center;
+        flex-wrap: nowrap;
         h3{
             margin: 0px;
             flex: none;
-            order: 1;
             align-self: stretch;
-            flex-grow: 0;
+            overflow: hidden;
         }
         p{
+            display: flex;
             margin: 3px;
-            flex: none;
-            order: 1;
+            flex-wrap: nowrap;
             align-self: stretch;
-            flex-grow: 0;
+            overflow: hidden;
         }
         .prix{
             align-self: flex-end;
             align-items: right;
         }
         .fa-circle-check{
-            /* display:none; ? */
             background: #99E2D0;
             background-clip: text;
+            border-radius: 0px 15px 15px 0px;
         }
-    }
+    }   
 }
+
 
 
 footer {
@@ -309,6 +320,16 @@ footer {
     background-color:  #353535;
     padding-left: 15px;
     padding-bottom: 15px;
+    section {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin: 3px;           
+        }
+        a{
+            color: white;
+        }
+    }
 }
 
 /* au dela de 768*/
