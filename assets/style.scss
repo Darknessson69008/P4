@@ -6,7 +6,7 @@ $main-green-color: rgba(153,226,206);
 /*revoir loader sans js*/
 
 .loader {
-    display:none;
+    scale: 0;
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #3498db; /* Blue */
     border-radius: 50%;
@@ -23,13 +23,29 @@ $main-green-color: rgba(153,226,206);
 
 @keyframes spin {
     from{
+        scale: 1;
         transform: rotate(0deg);
     }
     to {
         transform : rotate(360deg);
-        opacity: 0;
+        scale: 0;
     }
 }
+
+.content {
+    animation: view 3s ;
+    }
+
+@keyframes view {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 0;
+    }
+}
+
+
 
 
     // en absolute, mettre nouveau sur images 
@@ -266,6 +282,15 @@ a {
         flex-direction: column;
         gap:10px;
         padding: 15px;
+        &.entrees{
+            animation: fadein 1s ease-in;
+        }
+        &.plats{
+            animation: fadein 2s ease-in;
+        }
+        &.desserts{
+            animation: fadein 3s ease-in;
+        }
         h2{
             font-weight: 100;
             margin-bottom: 0px;
@@ -308,6 +333,18 @@ a {
             border-radius: 0px 15px 15px 0px;
         }
     }   
+}
+
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    75%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
