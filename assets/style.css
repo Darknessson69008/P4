@@ -1,4 +1,3 @@
-/*revoir loader sans js*/
 .loader {
   scale: 0;
   border: 16px solid #f3f3f3; /* Light grey */
@@ -263,13 +262,13 @@ a {
   padding: 15px;
 }
 .menu .repas.entrees {
-  animation: fadein 1s ease-in;
+  animation: 1s fadein 1s ease-in;
 }
 .menu .repas.plats {
-  animation: fadein 2s ease-in;
+  animation: 1s fadein 2s ease-in;
 }
 .menu .repas.desserts {
-  animation: fadein 3s ease-in;
+  animation: 1s fadein 3s ease-in;
 }
 .menu .repas h2 {
   font-weight: 100;
@@ -316,9 +315,6 @@ a {
 
 @keyframes fadein {
   0% {
-    opacity: 0;
-  }
-  75% {
     opacity: 0;
   }
   100% {
