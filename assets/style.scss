@@ -3,7 +3,6 @@ $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
 $main-green-color: rgba(153,226,206);
 
-/*revoir loader sans js*/
 
 .loader {
     scale: 0;
@@ -54,6 +53,7 @@ $main-green-color: rgba(153,226,206);
     // nth-child permet selectionner un element x dans un container
     // prix doit être a droite du plat, check le pousse, et ... si nom trop long
     // animation plats : animation opacity 0 1 + delay 1s puis 2s
+    // vw : taille de l'ecran de l'utilisateur
 
 header {
     display: flex;
@@ -261,6 +261,12 @@ a {
     margin-bottom: -40px; 
 }
 
+
+// peusdoclasse peut appeler un autre element tant qu'il dedans
+// transition : widht 1s
+// et .card:hover .check {} !!!!
+
+
 .menu {
     display:flex;
     flex-direction: column;
@@ -283,13 +289,13 @@ a {
         gap:10px;
         padding: 15px;
         &.entrees{
-            animation: fadein 1s ease-in;
+            animation: 1s fadein 1s ease-in;
         }
         &.plats{
-            animation: fadein 2s ease-in;
+            animation: 1s fadein 2s ease-in;
         }
         &.desserts{
-            animation: fadein 3s ease-in;
+            animation: 1s fadein 3s ease-in; // durée nom delay type //
         }
         h2{
             font-weight: 100;
@@ -331,15 +337,12 @@ a {
             background: #99E2D0;
             background-clip: text;
             border-radius: 0px 15px 15px 0px;
-        }
+        } // ne pas oublier la height !!!
     }   
 }
 
 @keyframes fadein {
     0% {
-        opacity:0;
-    }
-    75%{
         opacity:0;
     }
     100%{
