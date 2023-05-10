@@ -289,20 +289,20 @@ a {
         gap:10px;
         padding: 15px;
         &.entrees{
-            animation: 1s fadein 1s ease-in;
+            animation: 1s fadein 0s ease-in;
         }
         &.plats{
-            animation: 1s fadein 2s ease-in;
+            animation: 2s fadein 0s ease-in;
         }
         &.desserts{
-            animation: 1s fadein 3s ease-in; // durée nom delay type //
+            animation: 3s fadein 0s ease-in; // durée nom delay type //
         }
         h2{
             font-weight: 100;
             margin-bottom: 0px;
         }
         .border_title{
-            border-top: 3px solid rgba(153,226,206,1);
+            border-top: 3px solid $main-green-color;
             width: 40px;
             margin:0px;
         }
@@ -310,39 +310,73 @@ a {
     .card {
         display: flex;
         flex-direction: row;
+        top: 20px;
+        left: 20px;
         background: #FFFFFF;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
         border-radius: 15.0431px;
-        padding: 10px;
-        justify-content: space-between;
+        height: 69px;
         flex-wrap: nowrap;
-        h3{
-            margin: 0px;
-            flex: none;
-            align-self: stretch;
-            overflow: hidden;
-        }
-        p{
+        align-items: center;
+        justify-content: space-between;
+        .card_text {
             display: flex;
-            margin: 3px;
-            flex-wrap: nowrap;
-            align-self: stretch;
-            overflow: hidden;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .intitulee{
+                display: flex;
+                flex-direction: column;
+                padding-left: 15px;
+                h3{
+                    margin: 0px;
+                    flex: none;
+                    align-self: stretch;
+                    overflow: hidden;
+                }
+                p{
+                    display: flex;
+                    margin: 3px;
+                    flex-wrap: nowrap;
+                    align-self: stretch;
+                    overflow: hidden;
+                }
+            }
+            .prix{
+                display: flex;
+                align-self: flex-end;
+                text-align: center;
+                font-weight: bold;
+                padding-right: 15px;
+            }
         }
-        .prix{
-            align-self: flex-end;
-            align-items: right;
-        }
-        .fa-circle-check{
-            background: #99E2D0;
-            background-clip: text;
+        .check{ 
+            position: absolute;
+            width: 49px;
+            height: 69px;
+            right: -60px;
             border-radius: 0px 15px 15px 0px;
-        } // ne pas oublier la height !!!
-    }   
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: $main-green-color;
+            width: 49px;
+        }    
+    }
+    .card:hover .check {
+        position: relative;
+        right: 0px;
+        transition: 250ms ease-out;
+    }
+
 }
 
 @keyframes fadein {
     0% {
+        opacity:0;
+    }
+    75% {
         opacity:0;
     }
     100%{

@@ -262,13 +262,13 @@ a {
   padding: 15px;
 }
 .menu .repas.entrees {
-  animation: 1s fadein 1s ease-in;
+  animation: 1s fadein 0s ease-in;
 }
 .menu .repas.plats {
-  animation: 1s fadein 2s ease-in;
+  animation: 2s fadein 0s ease-in;
 }
 .menu .repas.desserts {
-  animation: 1s fadein 3s ease-in;
+  animation: 3s fadein 0s ease-in;
 }
 .menu .repas h2 {
   font-weight: 100;
@@ -282,39 +282,71 @@ a {
 .menu .card {
   display: flex;
   flex-direction: row;
+  top: 20px;
+  left: 20px;
   background: #FFFFFF;
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
-  padding: 10px;
-  justify-content: space-between;
+  height: 69px;
   flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
 }
-.menu .card h3 {
+.menu .card .card_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu .card .card_text .intitulee {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+.menu .card .card_text .intitulee h3 {
   margin: 0px;
   flex: none;
   align-self: stretch;
   overflow: hidden;
 }
-.menu .card p {
+.menu .card .card_text .intitulee p {
   display: flex;
   margin: 3px;
   flex-wrap: nowrap;
   align-self: stretch;
   overflow: hidden;
 }
-.menu .card .prix {
+.menu .card .card_text .prix {
+  display: flex;
   align-self: flex-end;
-  align-items: right;
+  text-align: center;
+  font-weight: bold;
+  padding-right: 15px;
 }
-.menu .card .fa-circle-check {
-  background: #99E2D0;
-  -webkit-background-clip: text;
-          background-clip: text;
+.menu .card .check {
+  position: absolute;
+  width: 49px;
+  height: 69px;
+  right: -60px;
   border-radius: 0px 15px 15px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(153, 226, 206);
+  width: 49px;
+}
+.menu .card:hover .check {
+  position: relative;
+  right: 0px;
+  transition: 250ms ease-out;
 }
 
 @keyframes fadein {
   0% {
+    opacity: 0;
+  }
+  75% {
     opacity: 0;
   }
   100% {
