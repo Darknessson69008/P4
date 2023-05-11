@@ -325,20 +325,20 @@ a {
             justify-content: space-between;
             width: 100%;
             .intitulee{
-                display: flex;
-                flex-direction: column;
                 padding-left: 15px;
                 h3{
                     margin: 0px;
                     flex: none;
                     align-self: stretch;
+                    max-height: 21px;
                     overflow: hidden;
+                  //  white-space:normal;
+                  //  text-overflow: ellipsis;
                 }
                 p{
-                    display: flex;
                     margin: 3px;
-                    flex-wrap: nowrap;
                     align-self: stretch;
+                    max-height: 19px;
                     overflow: hidden;
                 }
             }

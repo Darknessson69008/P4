@@ -299,21 +299,19 @@ a {
   width: 100%;
 }
 .menu .card .card_text .intitulee {
-  display: flex;
-  flex-direction: column;
   padding-left: 15px;
 }
 .menu .card .card_text .intitulee h3 {
   margin: 0px;
   flex: none;
   align-self: stretch;
+  max-height: 21px;
   overflow: hidden;
 }
 .menu .card .card_text .intitulee p {
-  display: flex;
   margin: 3px;
-  flex-wrap: nowrap;
   align-self: stretch;
+  max-height: 19px;
   overflow: hidden;
 }
 .menu .card .card_text .prix {
