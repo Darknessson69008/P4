@@ -1,7 +1,11 @@
+* {
+  border: solid 1px red;
+}
+
 .loader {
   scale: 0;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid rgb(153, 226, 206);
+  border-top: 16px solid rgb(147, 86, 220);
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -78,6 +82,7 @@ body {
 h1 {
   font-family: "Shrikhand", sans-serif;
   text-align: center;
+  font-weight: 400;
 }
 
 .logo {
@@ -284,6 +289,7 @@ a {
 .menu .card {
   display: flex;
   flex-direction: row;
+  padding-left: 15px;
   top: 20px;
   left: 20px;
   background: #FFFFFF;
@@ -302,6 +308,7 @@ a {
 }
 .menu .card .card_text .intitulee {
   display: block;
+  width: calc(70% + 60px);
 }
 .menu .card .card_text .intitulee .intitulee_titre {
   display: inline-block;
@@ -309,7 +316,8 @@ a {
   font-size: 1.17em;
   margin: 0px;
   box-sizing: border-box;
-  width: calc(100% - 10px);
+  height: 21px;
+  width: calc(100% - 15px);
   flex: none;
   overflow: hidden;
   white-space: nowrap;
@@ -319,21 +327,23 @@ a {
   display: inline-block;
   margin: 0px;
   box-sizing: border-box;
-  width: calc(100% - 10px);
+  width: calc(100% - 15px);
+  height: 16px;
   flex: none;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu .card .card_text .prix {
+.menu .card .prix {
   display: block;
   align-self: flex-end;
   text-align: end;
   font-weight: bold;
   padding-right: 15px;
   height: 100%;
+  width: 30px;
 }
-.menu .card .check {
+.menu .check {
   position: absolute;
   width: 49px;
   height: 69px;
@@ -343,13 +353,20 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
+  opacity: 0;
   background-color: rgb(153, 226, 206);
 }
-.menu .card:hover .check {
+
+.card:hover .check {
   position: relative;
   right: 0px;
   height: 69px;
+  opacity: 1;
   transition: 250ms ease-out;
+}
+
+.card:hover .prix {
+  transform: translate(-1px);
 }
 
 @keyframes fadein {
@@ -382,6 +399,9 @@ footer section a {
 
 /* au dela de 768*/
 @media (min-width: 767.98px) {
+  img {
+    height: 350px;
+  }
   .fonctionnement .fonctionnement_flex {
     display: flex;
     flex-direction: row;
@@ -412,8 +432,8 @@ footer section a {
     padding: 0px;
   }
   .menu .repas {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
   .menu .card {
     align-items: center;

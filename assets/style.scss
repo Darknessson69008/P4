@@ -3,11 +3,15 @@ $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
 $main-green-color: rgba(153,226,206);
 
+* {
+    border: solid 1px red;
+}
+
 
 .loader {
     scale: 0;
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+    border: 16px solid $main-green-color; 
+    border-top: 16px solid $main-purple-color; 
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -97,6 +101,7 @@ body {
 h1 {
     font-family: 'Shrikhand', sans-serif ;
     text-align: center;
+    font-weight: 400;
 }
 
 .logo {
@@ -312,6 +317,7 @@ a {
     .card {
         display: flex;
         flex-direction: row;
+        padding-left: 15px;
         top: 20px;
         left: 20px;
         background: #FFFFFF;
@@ -326,15 +332,17 @@ a {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            .intitulee{
+            .intitulee {
                 display: block;
+                width: calc(70% + 60px);
                 .intitulee_titre{
                     display: inline-block;
                     font-weight: bold;
                     font-size: 1.17em;
                     margin: 0px;
                     box-sizing: border-box;
-                    width: calc(100% - 10px);
+                    height:21px;
+                    width: calc(100% - 15px);
                     flex: none;
                     overflow: hidden;
                     white-space:nowrap;
@@ -344,12 +352,14 @@ a {
                     display: inline-block;
                     margin: 0px;
                     box-sizing: border-box;
-                    width: calc(100% - 10px);
+                    width: calc(100% - 15px);
+                    height:16px;
                     flex:none;
                     overflow: hidden;
                     white-space:nowrap;
                     text-overflow: ellipsis;
                 }
+            }
             }
             .prix{
                 display: block;
@@ -358,6 +368,7 @@ a {
                 font-weight: bold;
                 padding-right: 15px;
                 height: 100%;
+                width: 30px;
             }
         }
         .check{ 
@@ -370,6 +381,7 @@ a {
             justify-content: center;
             align-items: center;
             color: white;
+            opacity: 0;
             background-color: $main-green-color;
         }    
     }
@@ -377,10 +389,19 @@ a {
         position: relative;
         right: 0px;
         height: 69px;
+        opacity: 1;
         transition: 250ms ease-out;
     }
+    .card:hover .prix {
+        transform: translate(-1px);
+    }
 
-}
+
+// Bart : overflow hidden sur selet card pour eviter debordement 326
+// position absolute en hover -ajuster position a droite, scale 0; transform origin sur le check
+// remettre le translate sur le prix pour deplacement qd check - peut etre sur la taille corps du texte
+// enlever space beetwen, et ajouter padding
+
 
 @keyframes fadein {
     0% {
@@ -416,6 +437,10 @@ footer {
 /* au dela de 768*/
 @media (min-width: 767.98px) {
 
+    img{
+        height: 350px;
+    }
+
     .fonctionnement {
         .fonctionnement_flex{
             display: flex;
@@ -449,8 +474,8 @@ footer {
             padding: 0px;
         }
         .repas {
-            padding-left:100px;
-            padding-right: 100px;
+            padding-left:90px;
+            padding-right: 90px;
         }
         .card {
             align-items: center;
