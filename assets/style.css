@@ -136,6 +136,8 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.fonctionnement h2 {
   padding-left: 30px;
 }
 .fonctionnement p {
@@ -299,27 +301,37 @@ a {
   width: 100%;
 }
 .menu .card .card_text .intitulee {
-  padding-left: 15px;
+  display: block;
 }
-.menu .card .card_text .intitulee h3 {
+.menu .card .card_text .intitulee .intitulee_titre {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.17em;
   margin: 0px;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
   flex: none;
-  align-self: stretch;
-  max-height: 21px;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.menu .card .card_text .intitulee p {
-  margin: 3px;
-  align-self: stretch;
-  max-height: 19px;
+.menu .card .card_text .intitulee .intitulee_text {
+  display: inline-block;
+  margin: 0px;
+  box-sizing: border-box;
+  width: calc(100% - 10px);
+  flex: none;
   overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu .card .card_text .prix {
-  display: flex;
+  display: block;
   align-self: flex-end;
-  text-align: center;
+  text-align: end;
   font-weight: bold;
   padding-right: 15px;
+  height: 100%;
 }
 .menu .card .check {
   position: absolute;
@@ -327,16 +339,16 @@ a {
   height: 69px;
   right: -60px;
   border-radius: 0px 15px 15px 0px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   color: white;
   background-color: rgb(153, 226, 206);
-  width: 49px;
 }
 .menu .card:hover .check {
   position: relative;
   right: 0px;
+  height: 69px;
   transition: 250ms ease-out;
 }
 
@@ -368,4 +380,47 @@ footer section a {
   color: white;
 }
 
-/* au dela de 768*//*# sourceMappingURL=style.css.map */
+/* au dela de 768*/
+@media (min-width: 767.98px) {
+  .fonctionnement .fonctionnement_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  .fonctionnement .fonctionnement_flex .list1 {
+    width: 30%;
+  }
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    width: 100%;
+  }
+  .restaurants .card {
+    width: 45%;
+  }
+  .menu {
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .menu .nom {
+    justify-content: center;
+    gap: 25px;
+    padding: 0px;
+  }
+  .menu .repas {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .menu .card {
+    align-items: center;
+  }
+  footer section {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

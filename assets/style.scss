@@ -156,7 +156,9 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-left: 30px;
+    h2 {
+        padding-left: 30px;
+    }
     p {
         position: absolute;
         color: #FFFFFF;
@@ -325,29 +327,37 @@ a {
             justify-content: space-between;
             width: 100%;
             .intitulee{
-                padding-left: 15px;
-                h3{
+                display: block;
+                .intitulee_titre{
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: 1.17em;
                     margin: 0px;
+                    box-sizing: border-box;
+                    width: calc(100% - 10px);
                     flex: none;
-                    align-self: stretch;
-                    max-height: 21px;
                     overflow: hidden;
-                  //  white-space:normal;
-                  //  text-overflow: ellipsis;
-                }
-                p{
-                    margin: 3px;
-                    align-self: stretch;
-                    max-height: 19px;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                } 
+                .intitulee_text{
+                    display: inline-block;
+                    margin: 0px;
+                    box-sizing: border-box;
+                    width: calc(100% - 10px);
+                    flex:none;
                     overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
                 }
             }
             .prix{
-                display: flex;
+                display: block;
                 align-self: flex-end;
-                text-align: center;
+                text-align: end;
                 font-weight: bold;
                 padding-right: 15px;
+                height: 100%;
             }
         }
         .check{ 
@@ -356,17 +366,17 @@ a {
             height: 69px;
             right: -60px;
             border-radius: 0px 15px 15px 0px;
-            display:flex;
+            display:inline-flex;
             justify-content: center;
             align-items: center;
             color: white;
             background-color: $main-green-color;
-            width: 49px;
         }    
     }
     .card:hover .check {
         position: relative;
         right: 0px;
+        height: 69px;
         transition: 250ms ease-out;
     }
 
@@ -405,5 +415,54 @@ footer {
 
 /* au dela de 768*/
 @media (min-width: 767.98px) {
+
+    .fonctionnement {
+        .fonctionnement_flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            .list1 {
+                width: 30%;
+            }
+        }
+    }
+
+    .restaurants{
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2{
+            width: 100%;
+        }
+        .card{
+            width: 45%;
+        }
+    }
+
+    .menu {
+        justify-content: center;
+        width: 80%;
+        margin-left: 10%;
+        .nom{
+            justify-content: center;
+            gap: 25px;
+            padding: 0px;
+        }
+        .repas {
+            padding-left:100px;
+            padding-right: 100px;
+        }
+        .card {
+            align-items: center;
+        }
+    }
+
+    footer {
+        section{
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            gap: 20px;
+        }
+    }
 
 }
