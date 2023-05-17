@@ -3,9 +3,9 @@ $main-bg-color: rgba(234, 234, 234, 1);
 $main-purple-color: rgba(147,86,220);
 $main-green-color: rgba(153,226,206);
 
-* {
-    border: solid 1px red;
-}
+//* {
+//    border: solid 1px red;
+//}
 
 
 .loader {
@@ -16,7 +16,7 @@ $main-green-color: rgba(153,226,206);
     width: 120px;
     height: 120px;
     margin: auto;
-    position: absolute;
+    position: fixed;  //fixed = par rapport au view port
     top: 0;
     right: 0;
     bottom: 0;
@@ -48,10 +48,9 @@ $main-green-color: rgba(153,226,206);
     }
 }
 
-
-
-
+    // passer code au w3c
     // en absolute, mettre nouveau sur images 
+    
     //   pour checked, carré scale 0 à 0% pour 1 a 100%, ou width, 
     // avec un overflow hidden, avec transition??
     // nth-child permet selectionner un element x dans un container
@@ -161,8 +160,9 @@ a {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 20px;
     h2 {
-        padding-left: 30px;
+        padding-left: 10px;
     }
     p {
         position: absolute;
@@ -180,7 +180,7 @@ a {
         text-align: center;
         align-items: center;
         flex-direction: row;
-        width: 90%;
+        width: 95%;
         background: #F7F7F7;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
@@ -195,7 +195,6 @@ a {
 .heart__icon{
     display: flex;
     justify-content: center;
-    align-items: right;
     padding-right: 20px;
     padding-top: 10px;
     .heart__icon--empty{
@@ -322,7 +321,7 @@ a {
         left: 20px;
         background: #FFFFFF;
         box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-        border-radius: 15.0431px;
+        border-radius: 15px;
         height: 69px;
         flex-wrap: nowrap;
         align-items: center;
@@ -333,28 +332,34 @@ a {
             justify-content: space-between;
             width: 100%;
             .intitulee {
-                display: block;
-                width: calc(70% + 60px);
+                margin:0;
+                //display: block;
+                flex:auto;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 80%;
+                overflow: hidden;
                 .intitulee_titre{
-                    display: inline-block;
+                    //display: inline-block;
                     font-weight: bold;
                     font-size: 1.17em;
                     margin: 0px;
-                    box-sizing: border-box;
+                    //box-sizing: border-box;
                     height:21px;
-                    width: calc(100% - 15px);
-                    flex: none;
+                    //width: calc(100% - 10px);
+                    flex: auto;
                     overflow: hidden;
                     white-space:nowrap;
                     text-overflow: ellipsis;
                 } 
                 .intitulee_text{
-                    display: inline-block;
+                    flex: auto;
+                    //display: inline-block;
                     margin: 0px;
-                    box-sizing: border-box;
-                    width: calc(100% - 15px);
+                    //box-sizing: border-box;
+                    //width: calc(100% - 10px);
                     height:16px;
-                    flex:none;
+                    //flex:none;
                     overflow: hidden;
                     white-space:nowrap;
                     text-overflow: ellipsis;
@@ -362,13 +367,14 @@ a {
             }
             }
             .prix{
-                display: block;
+                //display: block;
+                flex: auto;
                 align-self: flex-end;
                 text-align: end;
                 font-weight: bold;
-                padding-right: 15px;
-                height: 100%;
-                width: 30px;
+                //height: 100%;
+                //width: 30px;
+                padding-right: 5px;
             }
         }
         .check{ 
@@ -377,30 +383,43 @@ a {
             height: 69px;
             right: -60px;
             border-radius: 0px 15px 15px 0px;
-            display:inline-flex;
+            display:block;
             justify-content: center;
             align-items: center;
             color: white;
             opacity: 0;
             background-color: $main-green-color;
+            transform-origin: right;
+            transform: scale(0);
         }    
     }
-    .card:hover .check {
-        position: relative;
+    .card:hover {
+        .check {
+        display: flex;
+        position:relative;
         right: 0px;
-        height: 69px;
         opacity: 1;
         transition: 250ms ease-out;
+        transform: scale(1);
+        }
+        .prix {
+        transform: translate(-0px);
+        }
+        .card_text{
+            width: calc(100% - 49px);
+        }
     }
-    .card:hover .prix {
-        transform: translate(-1px);
-    }
+
+
+    
 
 
 // Bart : overflow hidden sur selet card pour eviter debordement 326
 // position absolute en hover -ajuster position a droite, scale 0; transform origin sur le check
 // remettre le translate sur le prix pour deplacement qd check - peut etre sur la taille corps du texte
 // enlever space beetwen, et ajouter padding
+
+
 
 
 @keyframes fadein {
