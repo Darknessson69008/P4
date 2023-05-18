@@ -1,0 +1,513 @@
+
+$main-bg-color: rgba(234, 234, 234, 1);
+$main-purple-color: rgba(147,86,220);
+$main-green-color: rgba(153,226,206);
+
+//* {
+//    border: solid 1px red;
+//}
+
+
+.loader {
+    scale: 0;
+    border: 16px solid $main-green-color; 
+    border-top: 16px solid $main-purple-color; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    position: fixed;  //fixed = par rapport au view port
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 3s linear;
+}
+
+@keyframes spin {
+    from{
+        scale: 1;
+        transform: rotate(0deg);
+    }
+    to {
+        transform : rotate(360deg);
+        scale: 0;
+    }
+}
+
+.content {
+    animation: view 3s ;
+    }
+
+@keyframes view {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 0;
+    }
+}
+
+    // passer code au w3c
+    // en absolute, mettre nouveau sur images 
+    // taper tous les plats
+
+    //   pour checked, carré scale 0 à 0% pour 1 a 100%, ou width, 
+    // avec un overflow hidden, avec transition??
+    // nth-child permet selectionner un element x dans un container
+    // prix doit être a droite du plat, check le pousse, et ... si nom trop long
+    // animation plats : animation opacity 0 1 + delay 1s puis 2s
+    // vw : taille de l'ecran de l'utilisateur
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .logo{
+        width: 80%;
+    }
+    a {
+        align-items: flex-start;
+        width: 10%;
+    }
+    .localisation {
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(203, 203, 203);
+        i {
+        width: 12px;
+        height: 16px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        padding-right: 15px;
+        }
+    }   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Shrikhand', sans-serif ;
+    text-align: center;
+    font-weight: 400;
+}
+
+.logo {
+    font-family: 'Shrikhand', sans-serif ;
+    text-align: center;
+    font-weight: 500;
+    font-size: xx-large ;
+}
+
+h4 {
+    font-family: 'Shrikhand', sans-serif ;
+    padding-top: 20px;
+    margin-top: 0%;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.btn { 
+    display: flex;
+    padding: 15px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    width: 50%;
+    min-width: 218px;
+    justify-content: center;
+    align-self: center;
+    margin-top: 16px;
+    &:hover{
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.55);
+    }
+}
+
+.reserver {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: $main-bg-color;
+    padding: 50px;       
+}
+
+
+
+.fonctionnement {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    h2 {
+        padding-left: 10px;
+    }
+    p {
+        position: absolute;
+        color: #FFFFFF;
+        background-color: $main-purple-color;
+        height: 22px;
+        width: 16px;
+        border-radius: 25px;
+        padding-left: 8px;
+        padding-top: 2px;
+    }
+    article {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+        width: 95%;
+        background: #F7F7F7;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        i {
+            padding-right: 15px;
+        }
+    }
+}
+
+.heart__icon{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 10px;
+    .heart__icon--empty{
+        color: black;
+    }
+    .heart__icon--full{
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
+    .heart__icon--full:hover{
+        opacity: 1;
+
+    }
+    .heart__icon--empty:hover{
+        opacity: 0;
+    }
+}    
+
+.restaurants {
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    padding:30px;
+    padding-bottom: 60px;
+    background-color: $main-bg-color;
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 0px;
+        gap: 4px;
+        width: 100%;
+        height: 251px;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+        .card-sum {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        img {
+            height: 75%;
+            border-radius: 20px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        h3 {
+            margin:0;
+            font-weight: 900;
+            padding-left: 10px;
+        }
+        p{
+            margin: 2px;  
+            padding-left: 10px;
+        }
+        
+    }
+}
+
+
+.menu-img {
+    margin-bottom: -40px; 
+}
+
+
+// peusdoclasse peut appeler un autre element tant qu'il dedans
+// transition : widht 1s
+// et .card:hover .check {} !!!!
+
+
+.menu {
+    display:flex;
+    flex-direction: column;
+    background-color: $main-bg-color;
+    border-radius: 25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-bottom: 30px;
+    .nom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $main-bg-color;
+        border-radius: 25px;
+        padding-left: 15px;
+    }
+    .repas {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        padding: 15px;
+        &.entrees{
+            animation: 1s fadein 0s ease-in;
+        }
+        &.plats{
+            animation: 2s fadein 0s ease-in;
+        }
+        &.desserts{
+            animation: 3s fadein 0s ease-in; // durée nom delay type //
+        }
+        h2{
+            font-weight: 100;
+            margin-bottom: 0px;
+        }
+        .border_title{
+            border-top: 3px solid $main-green-color;
+            width: 40px;
+            margin:0px;
+        }
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        padding-left: 15px;
+        top: 20px;
+        left: 20px;
+        background: #FFFFFF;
+        box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        height: 69px;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        .card_text {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            .intitulee {
+                margin:0;
+                //display: block;
+                flex:auto;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 80%;
+                overflow: hidden;
+                .intitulee_titre{
+                    //display: inline-block;
+                    font-weight: bold;
+                    font-size: 1.17em;
+                    margin: 0px;
+                    //box-sizing: border-box;
+                    height:21px;
+                    //width: calc(100% - 10px);
+                    flex: auto;
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                } 
+                .intitulee_text{
+                    flex: auto;
+                    //display: inline-block;
+                    margin: 0px;
+                    //box-sizing: border-box;
+                    //width: calc(100% - 10px);
+                    height:16px;
+                    //flex:none;
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            }
+            .prix{
+                //display: block;
+                flex: auto;
+                align-self: flex-end;
+                text-align: end;
+                font-weight: bold;
+                //height: 100%;
+                //width: 30px;
+                padding-right: 5px;
+            }
+        }
+        .check{ 
+            position: absolute;
+            width: 49px;
+            height: 69px;
+            right: -60px;
+            border-radius: 0px 15px 15px 0px;
+            display:block;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            opacity: 0;
+            background-color: $main-green-color;
+            transform-origin: right;
+            transform: scale(0);
+        }    
+    }
+    .card:hover {
+        .check {
+        display: flex;
+        position:relative;
+        right: 0px;
+        opacity: 1;
+        transition: 250ms ease-out;
+        transform: scale(1);
+        }
+        .prix {
+        transform: translate(-0px);
+        }
+        .card_text{
+            width: calc(100% - 49px);
+        }
+    }
+
+
+    
+
+
+// Bart : overflow hidden sur selet card pour eviter debordement 326
+// position absolute en hover -ajuster position a droite, scale 0; transform origin sur le check
+// remettre le translate sur le prix pour deplacement qd check - peut etre sur la taille corps du texte
+// enlever space beetwen, et ajouter padding
+
+
+
+
+@keyframes fadein {
+    0% {
+        opacity:0;
+    }
+    75% {
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+footer {
+    color: #F7F7F7;
+    background-color:  #353535;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    section {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin: 3px;           
+        }
+        a{
+            color: white;
+        }
+    }
+}
+
+/* au dela de 768*/
+@media (min-width: 767.98px) {
+
+    img{
+        height: 350px;
+    }
+
+    .fonctionnement {
+        .fonctionnement_flex{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            .list1 {
+                width: 30%;
+            }
+        }
+    }
+
+    .restaurants{
+        flex-direction: row;
+        flex-wrap: wrap;
+        h2{
+            width: 100%;
+        }
+        .card{
+            width: 45%;
+        }
+    }
+
+    .menu {
+        justify-content: center;
+        width: 80%;
+        margin-left: 10%;
+        .nom{
+            justify-content: center;
+            gap: 25px;
+            padding: 0px;
+        }
+        .repas {
+            padding-left:90px;
+            padding-right: 90px;
+        }
+        .card {
+            align-items: center;
+        }
+    }
+
+    footer {
+        section{
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            gap: 20px;
+        }
+    }
+
+}
