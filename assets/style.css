@@ -337,9 +337,9 @@ a {
 }
 .menu .check {
   position: absolute;
-  width: 49px;
+  width: 0px;
   height: 69px;
-  right: -60px;
+  right: 0px;
   border-radius: 0px 15px 15px 0px;
   display: block;
   justify-content: center;
@@ -348,19 +348,14 @@ a {
   opacity: 0;
   background-color: rgb(153, 226, 206);
   transform-origin: right;
-  transform: scale(0);
 }
 
 .card:hover .check {
   display: flex;
   position: relative;
-  right: 0px;
+  width: 49px;
   opacity: 1;
   transition: 250ms ease-out;
-  transform: scale(1);
-}
-.card:hover .prix {
-  transform: translate(0px);
 }
 .card:hover .card_text {
   width: calc(100% - 49px);
