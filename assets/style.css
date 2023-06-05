@@ -168,6 +168,11 @@ a {
 }
 .fonctionnement article i {
   padding-right: 15px;
+  color: #7e7e7e;
+}
+
+.list1:hover i {
+  color: #9356DC;
 }
 
 .heart__icon {
